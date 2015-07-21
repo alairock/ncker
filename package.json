@@ -1,11 +1,14 @@
 {
   "name": "ncker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Docker runner for node.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "alairock",
+  "license": "MIT",
+  "dependencies": {
+    "child_process": "*.*.*"
+  }
 }
