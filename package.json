@@ -7,8 +7,5 @@
     "test": "test.js"
   },
   "author": "alairock",
-  "license": "MIT",
-  "dependencies": {
-    "child_process": "*.*.*"
-  }
+  "license": "MIT"
 }
