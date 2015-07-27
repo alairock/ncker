@@ -27,6 +27,13 @@ var ncker = {
                     });
                     options += ports;
                     break;
+                case "expose":
+                    var expose = "";
+                    Object.keys(settings[key]).forEach(function(exposeport) {
+                        expose += "--expose " + settings[key][exposeport] + " ";
+                    });
+                    options += expose;
+                    break;
                 case "volumes":
                     var volumes = "";
                     Object.keys(settings[key]).forEach(function(volume) {
@@ -53,8 +60,11 @@ var ncker = {
                 case "rm":
                     options += "--rm ";
                     break;
-                case "dnshost":
-                    //console.log(settings[key]);
+                case "hostname":
+                    options += "-h " + settings[key] + " ";
+                    break;
+                case "dns":
+                    options += "--dns " + settings[key] + " ";
                     break;
             }
         });
